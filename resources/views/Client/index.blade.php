@@ -58,7 +58,7 @@
                     @csrf
                     @method('DELETE')
       
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-danger confirmation" >Delete</button>
                 </form>
             </td>
             
@@ -70,5 +70,10 @@
     </table>
   
     {!! $client->links() !!}
-      
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+          $('.confirmation').on('click', function () {
+        return confirm('Are you sure?');
+    });
+</script>     
 @endsection
